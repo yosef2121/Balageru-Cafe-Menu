@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ባላገሩ Cafe - Menu</title>
+    <link rel="icon" type="image/png" href="pic/img/sign.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+
+    <style>
+        .menu-category {
+            scroll-margin-top: 100px;
+        }
+        .dish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .spicy::after {
+            content: "🌶️";
+            margin-left: 5px;
+        }
+        .veg::after {
+            content: "🌱";
+            margin-left: 5px;
+        }
+        .gluten-free::after {
+            content: "🚫🌾";
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-serif">
+    <!-- Header -->
+    <header class="bg-amber-900 text-amber-50 py-6 px-4 shadow-md">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-3xl font-bold">ባላገሩ Cafe</h1>
+                <p class="text-amber-200">ዓ.ም 1999</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#starters" class="hover:text-amber-300 transition">ልዩ</a>
+                <a href="#mains" class="hover:text-amber-300 transition">ዋና ምግቦች</a>
+                <a href="#desserts" class="hover:text-amber-300 transition">ጣፋጭ ምግቦች</a>
+                <a href="#drinks" class="hover:text-amber-300 transition">የሚጠጣ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 overflow-hidden">
+        <img src="pic/as11.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <div class="text-center text-white px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">እንኳን ደህና መጡ</h2>
+                <p class="text-xl md:text-2xl mb-6">Eat, Drink & Enjoy</p>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-4 py-2 bg-amber-700 rounded-full text-sm">ባላገሩ Cafe</span>
+                    <span class="px-4 py-2 bg-amber-700 rounded-full text-sm">ማውጫ-Menu</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <nav class="sticky top-0 bg-amber-800 text-white shadow-lg z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto py-3 space-x-6 hide-scrollbar">
+                <a href="#starters" class="whitespace-nowrap hover:text-amber-300 flex items-center">
+                    <i class="fas fa-utensils mr-2"></i> ልዩ
+                </a>
+                
+                </a>
+                <a href="#mains" class="whitespace-nowrap hover:text-amber-300 flex items-center">
+                    <i class="fas fa-drumstick-bite mr-2"></i> ዋና ምግቦች
+                </a>
+                <a href="#desserts" class="whitespace-nowrap hover:text-amber-300 flex items-center">
+                    <i class="fas fa-ice-cream mr-2"></i> ጣፋጭ ምግቦች
+                </a>
+                <a href="#drinks" class="whitespace-nowrap hover:text-amber-300 flex items-center">
+                    <i class="fas fa-wine-glass-alt mr-2"></i> የሚጠጣ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Starters Section -->
+        <section id="starters" class="menu-category mb-20">
+            <div class="flex items-center mb-8">
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+                <h2 class="text-3xl font-bold px-4 text-amber-900">ልዩ</h2>
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starter 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/aa0.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-amber-600 text-white px-2 py-1 rounded-full text-xs">የሼፍ ምርጫ/Chef's Choice</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">የበሬ ሥጋ በርገር/Beef Burger</h3>
+                            <span class="text-amber-700 font-bold">Br.650</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">የበሬ ሥጋ ፣ ጨው ፣ ቀይ ሽንኩርት ፣ የበርገር ዳቦ፣ አይብ ፣ አትክልት፣ ከቻፕ ፣ ሙስታርድ ፣ ማዮኒዝ/ ground beef, salt,  black pepper,  onion powder, Burger buns, Cheese, Vegetables, Ketchup, mustard, mayo</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="veg text-xs bg-green-100 text-green-800 px-2 py-1 rounded">ቬጀቴሪያን ያልሆነ/Non-Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Starter 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                       <img src="pic/as0.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ክትፎ/Kitfo</h3>
+                            <span class="text-amber-700 font-bold">Br.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"> የበሬ ሥጋ, ንጥር ቅቤ, ሚጥሚጣ, አይብ, ቆጮ/ lean beef,  niter kibbeh, mitmita, Ayib, Kocho, Injera.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="spicy text-xs bg-red-100 text-red-800 px-2 py-1 rounded">ቅመም/Spicy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Starter 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                         <img src="pic/as3.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-amber-600 text-white px-2 py-1 rounded-full text-xs">ልዩ ጣአም/Signature</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ሽሮ ወጥ/Special Shiro Wot</h3>
+                            <span class="text-amber-700 font-bold">Br.290</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">የሽሮ ዱቄት፣ ቀይ ሽንኩርት፣ ነጭ ሽንኩርት፣ ቲማቲም፣ ንጥር ቅቤ ፣ በርበሬ ፣ ጨው ፣ ውሃ ፣ እንጀራ/ shiro powder, red onion, garlic,  tomato, niter kibbeh, berbere, Salt, water, Injera</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soups & Salads Section -->
+        
+        <!-- Main Courses Section -->
+        <section id="mains" class="menu-category mb-20">
+            <div class="flex items-center mb-8">
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+                <h2 class="text-3xl font-bold px-4 text-amber-900">ዋና ምግቦች</h2>
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Main 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as4.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-amber-600 text-white px-2 py-1 rounded-full text-xs">ምርጥ/Signature</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ቋንጣ ፍርፍር/Kuwanta Firfir </h3>
+                            <span class="text-amber-700 font-bold">Br.380</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">ቋንጣ፣  እንጀራ፣ በጥሩ ሁኔታ የተከተፈ መካከለኛ ሽንኩርት ፣  የተከተፈ ነጭ ሽንኩርት፣ የተፈጨ በርበሬ፣ ንጥር ቅቤ ወይንም(ዘይት)፣ ጨው፣ ውሃ/ kuwanta, injera, medium onion, finely chopped, cloves garlic, minced, berbere, niter kibbeh (or oil), Salt, Water</p>
+                    </div> 
+                </div>
+                
+                <!-- Main 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as2.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ሳንድዊች/Special Sandwich</h3>
+                            <span class="text-amber-700 font-bold">Br.300</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">የበሬ ሥጋ ፣ ሽንኩርት ፣ ቃሪያ ፣ ቲማቲም ፣ የሳንድዊች ዳቦ ፣ አይብ/  beef tibs, onion, green pepper, tomato, sandwich bun, cheese</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">የተጠበሰ ሥጋ/Grilled meat kebab</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as6.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">በያይነቱ/Beyaynetu</h3>
+                            <span class="text-amber-700 font-bold">Br.250</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">ምስር ወጥ, ሽሮ, አትክልት (ጎመን፣ ካሮት እና ድንች ድብልቅ) ፎሶሊያ (አረንጓዴ ባቄላ እና ካሮት) ጥቅል ጎመን (የተጠበሰ ጎመን)/Misir Wot, Shiro, Atkilt Alicha, Gomen, Fosolia, Tikil Gomen, Salads</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="veg text-xs bg-green-100 text-green-800 px-2 py-1 rounded">ቬጀቴሪያን/Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Main 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as44.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-amber-600 text-white px-2 py-1 rounded-full text-xs">ምርጥ/Signature</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">የዶሮ በርገር/Chicken Burger </h3>
+                            <span class="text-amber-700 font-bold">Br.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">ዶሮ, ጨው, ፓፕሪካ , ሰላጣ, ቲማቲም, ሽንኩርት, ፒክልስ, አይብ/ chicken,  salt,  paprika, Lettuce, tomato, onion, pickles, cheese</p>
+                    </div>
+                </div>
+                
+                <!-- Main 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as051.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ፒዛ/ Pizza</h3>
+                            <span class="text-amber-700 font-bold">Br.550</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">ዱቄት, ውሃ, የወይራ ዘይት, ጨው, ደረቅ እርሾ, ቲማቲም, ነጭ ሽንኩርት, ሞዞሬላ አይብ/  flour, water, olive oil, salt, dry yeast, tomatoes, garlic, Mozzarella cheese</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">ፒዛ/ Pizza</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as5.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">ሸክላ ጥብስ/ Shekela Tibs</h3>
+                            <span class="text-amber-700 font-bold">Br.700</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">የበሬ ሥጋ፣ ቀይ ሽንኩርት፣ ነጭ ሽንኩርት፣ ቺሊ በርበሬ፣ ንጥር ቅቤ፣ የሎሚ ጭማቂ፣ እንጀራ፣ አዋዜ ወይም ሰናፊች/  beef,  red onion, garlic, chili peppers, niter kibbeh, lemon juice, Injera, Awaze or senafich</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="veg text-xs bg-green-100 text-green-800 px-2 py-1 rounded"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section id="desserts" class="menu-category mb-20">
+            <div class="flex items-center mb-8">
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+                <h2 class="text-3xl font-bold px-4 text-amber-900">ጣፋጭ ምግቦች</h2>
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dessert 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as07.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                       
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Chocolate Fudge Cake</h3>
+                            <span class="text-amber-700 font-bold">Br.180</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                    </div>
+                </div>
+                
+                <!-- Dessert 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as08.jpeg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Vanilla Sponge Cake</h3>
+                            <span class="text-amber-700 font-bold">Br.200</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Dessert 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as9.jpeg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Black Forest Cake</h3>
+                            <span class="text-amber-700 font-bold">Br.200</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="desserts" class="menu-category mb-20">
+            <div class="flex items-center mb-8">
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+                
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dessert 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as077.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                        
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Strawberry Shortcake</h3>
+                            <span class="text-amber-700 font-bold">Br.240</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                    </div>
+                </div>
+                
+                <!-- Dessert 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as088.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Coconut Cream Cake</h3>
+                            <span class="text-amber-700 font-bold">Br.200</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Dessert 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="pic/as99.jpg" alt="Bruschetta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Mango Mousse Cake</h3>
+                            <span class="text-amber-700 font-bold">Br.190</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks Section -->
+        <section id="drinks" class="menu-category">
+            <div class="flex items-center mb-8">
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+                <h2 class="text-3xl font-bold px-4 text-amber-900">የሚጠጣ</h2>
+                <div class="flex-grow border-t-2 border-amber-700"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Wine List -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-6 flex items-center">
+                        <i class="fas fa-wine-glass-alt mr-3"></i>ወይን/Wine 
+                    </h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2"></h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">አዋሽ/Awash</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.400</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ጉደር/Gouder</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.480</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ከሚላ/Kemila</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.470</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">አክሱሚት/Axumit</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+    <h3 class="text-2xl font-bold text-amber-800 mb-6 flex items-center">
+        <i class="fas fa-bottle-water mr-3"></i>ከ አልኮል ነፃ/Non-Alcoholic 
+    </h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ሶፊ ማልት/Sofi Malt</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.80</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ስንቅ ማልት/Sen’Q Malt</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.80</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ሀረር ሶፊ/Harar Sofi</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.80</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                   
+                    <div>
+
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">ለስላሳ መጠጦች/Soft drinks</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ኮካ ኮላ/Coca-Cola</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                             <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ስፕራይት/Sprite</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ሚሪንዳ/Mirinda</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">አምቦ የ ማዕድን ውሃ/SAmbo Mineral Water</p>
+                                    <p class="text-sm text-gray-600">Ethiopia</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.50</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cocktails & More -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-6 flex items-center">
+                        <i class="fas fa-cocktail mr-3"></i>የ አልኮል መጠጦች
+/Alcoholic Drinks
+                    </h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2"></h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ዳሽን ቢራ/Dashen Beer</p>
+                                    <p class="text-sm text-gray-600"> </p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.100</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ሀበሻ ቢራ/Habesha Beer</p>
+                                    <p class="text-sm text-gray-600"></p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.100</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ቅዱስ ጊዮርጊስ ቢራ/St. George Beer</p>
+                                    <p class="text-sm text-gray-600"> </p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.100</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ዋልያ ቢራ/Walia Beer</p>
+                                    <p class="text-sm text-gray-600"> </p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.100</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ሜታ ቢራ/Meta Beer</p>
+                                    <p class="text-sm text-gray-600"> </p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">የ ታሸገ ውሃ/Bottled Water</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">አኳ ሴፍ/Aqua Safe</p>
+                                    <p class="text-sm text-gray-600"></p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.40</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ብሉ ውሃ/Blue Water</p>
+                                    <p class="text-sm text-gray-600"></p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.40</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ጎልድ ውሃ/Gold water</p>
+                                    <p class="text-sm text-gray-600"></p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.40</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">ቡና እና ሻይ/Coffee & Tea</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">
+ኤስፕሬሶ/Espresso</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.40</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ካፑቺኖ/Cappuccino</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ጥቁር ቡና/Black Coffee</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ማኪያቶ/Makiyato</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ወተት/Milk</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.90</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="font-medium">ቀሽር/Kesher</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">Br.45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 py-12 px-4 mt-20">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ባላገሩ Cafe</h3>
+                    <p class="mb-4">Ethiopia Addis Ababa<br>ቦሌ/Bole Rwanda Street.</p>
+                    <p>ቦታ ለመያዝ/Reservations: (+251)912121234</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">የስራ ሰዓታት-Hours</h3>
+                    <p class="mb-2"><span class="font-medium">ቁርስ/Breakfast:</span> 7:00 AM - 11:00 AM</p>
+                    <p class="mb-2"><span class="font-medium">ምሳ/Lunch:</span> 11:30 AM - 3:00 PM</p>
+                    <p class="mb-2"><span class="font-medium">እራት/Dinner:</span> 5:30 PM - 10:00 PM</p>
+                    
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-amber-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-amber-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-amber-300"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p class="mt-6 text-sm">© 2025 ባላገሩ Cafe. All rights reserved.</p>
+
+
+
+                    <div class="text-center mt-6 space-y-2">
+  
+  
+  <a href="https://yosefsolomon21.github.io/Yosefsolomon/" 
+     target="_blank" 
+     class="text-sm text-blue-600 hover:underline font-medium">
+    Developed by Yosef Solomon
+  </a>
+</div>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
